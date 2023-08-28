@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <title>REGISTRATION FORM</title>
+    <h1  style="text-align: center";>REGISTRATION FORM</h1>
+    <BR>
+      <style>
+    
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid rgb(24, 22, 22);
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=submit ] {
+        background-color: #4CAF50;
+        color: white;
+         margin-left: 400px; 
+          padding: 14px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          
+        }
+        input[type=Reset] {
+            margin-left: 200px; 
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        input[type=Reset]:hover {
+          background-color: #45a049;
+        }
+    
+        div {
+          border-radius: 5px;
+          background-color: #e4ebec;
+          padding: 20px;
+        }
+    
+        
+    </style>
+      
+</head>
+<body>
+    
+    <form onsubmit="getvalues()" target="_blank">
+      <div>
+        <br>
+        <fieldset>
+        <legend>PERSONAL DETAILS</legend><br>
+        <label for="name"> STUDENT NAME :</label>
+        <input type="text" name="name" id="name" placeholder="enter your name.." required>
+        <br><br>
+      <label for="father">FATHER NAME :</label>
+        <input type="text" id="father" placeholder="enter father name" required><br><br>
+        <label for="mother">MOTHER NAME :</label>
+        <input type="text" id="mother" placeholder="enter mother name" required><br><br>
+
+       
+        <lable for="dob" >DATE OF BIRTH</lable>
+        <input type="date" name="dob" id="dob" placeholder="birthday" required>
+        <br><br>
+        <label for="gender" >GENDER :</label>
+        <input type="radio" id="gender" name="gender"> 
+        <label for="male">MALE</label>
+        <input type="radio" id="gender" name="gender"> 
+        <lable for="female">FEMALE</lable>
+        <input type="radio" id="gender" name="gender"> 
+        <lable for="prefer not to say">PREFER NOT TO SAY</lable><br><br>
+        <label for="aadhar" >AADHAR NUMBER :</label>
+        <input type="number" id="aadhar" maxlength="12" placeholder="enter aadhar "><br><br>
+
+
+        <label for="phone">CONTACT NUMBER :</label>
+        <input type="number" id="phone" maxlength="10" formate="[0-9]{10}" placeholder="xxxxxxxxxx" required><br><br>
+        <label for="address">ADDRESS :</label>
+        <input type="text" id="address" placeholder="enter address.." required><BR><BR>
+        <label for="mail">PERSONAL MAIL :</label>
+        <input type="email" id="mail" name="mail" placeholder="id@gmail.com" required>
+
+        </fieldset><br><br><br>
+        <fieldset>
+        <legend>PROFESSION DETAILS</legend>
+        <br>
+        <lable for="rollno" >EAMCET HALLTICKET NUMBER:</lable>
+        <input type="text" id="rollno" name="rollno" placeholder="enter rollno.." required>
+        <br><br>
+        <label for="rank" >EAMCET RANK :</label>
+        <input type="text" id="rank" nmae="rank" placeholder="enter your rank.." required><br><br>
+        <label for="branch"> SELECT BRANCH :</label>
+        <select id="branch" name="branch" required >
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="civil" >CIVIL</option>
+            <option value="other">OTHER</option>
+        </select><BR><br>
+        <label for="year">YEAR OF STUDY :</label>
+        <select id="year" name="YEAR" required>
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV" >IV</option>
+        </select><br><br>
+        <label for="last">INTER PERCENTAGE :</label>
+        <input type="number" id="last" min="0" MAX="100" placeholder="____%"><BR><BR>
+        <label for="future">FUTURE GOAL :</label>
+        <input type="text" id="future" placeholder="what you want to become" required>
+        </fieldset>
+        <br><br>
+        <input type="reset" id ="Reset" name="Reset">
+        <input type="submit" id="submit" name="submit">
+        </div>
+    </form>
+    
+</body>
+
+<script >
+  function getvalues()
+  {
+  
+    let name=document.getElementById("name");
+    let father=document.getElementById("father");
+    let mother=document.getElementById("mother");
+    let dob=document.getElementById("dob");
+    // let gender=document.getElementById("gender");
+    let aadhar=document.getElementById("aadhar");
+    let phone=document.getElementById("phone");
+    let address=document.getElementById("address");
+    let mail=document.getElementById("mail");  
+    let rollno=document.getElementById("rollno");
+    let rank=document.getElementById("rank");
+    let branch=document.getElementById("branch");
+    let year=document.getElementById("year");
+    let last=document.getElementById("last");
+    let future=document.getElementById("future");
+    document.writeln( "PERSONAL DETAILS"+"<br>");
+    document.writeln("NAME  :"+name.value+"<br>");
+    document.writeln("FATHER NAME  :"+father.value+"<br>");
+    document.writeln(" MOTHER NAME  :"+mother.value+"<br>");
+    document.writeln("DATE OF BIRTH  :"+dob.value+"<br>");
+    // document.writeln("GENDER  :"+gender.value+"<br>");
+    document.writeln("AADHAR NO.  :"+aadhar.value+"<br>");
+    document.writeln("PHONE NO.  :"+phone.value+"<br>");
+    document.writeln("ADDRESS  :"+address.value+"<br>");
+    document.writeln("MAIL  :"+mail.value+"<br>");
+    document.writeln( "PROFESSION DETAILS"+"<br>");
+    document.writeln("EAMCET HALL TICKET NUMBER  :"+rollno.value+"<br>");
+    document.writeln("EAMCET RANK :"+rank.value+"<br>")
+    document.writeln("BRANCH  :"+branch.value+"<br>");
+    document.writeln("YEAR OF STUDY  :"+year.value+"<br>");
+    document.writeln("INTER PERCENTAGE  :"+last.value+"<br>");
+    document.writeln("FUTURE GOAL  :"+future.value+"<br>");
+  }
+</script>   
+
+</html>
